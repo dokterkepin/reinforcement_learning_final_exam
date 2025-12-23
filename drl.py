@@ -1,3 +1,5 @@
+# the training sometimes can be fail, please train more than one times if it is fail
+# there are possiblity the passenger spawned inside the taxi or they are spawned in the same location. so you might only see one passenger.
 import numpy as np
 import gymnasium as gym
 from gymnasium.envs.registration import register
@@ -9,7 +11,7 @@ register(
     entry_point="my_taxi:MyTaxiEnv",
     max_episode_steps=200,
 )
-episodes = 5000      
+episodes = 10000      
 max_steps = 200         
 alpha = 0.1     
 gamma = 0.99    
